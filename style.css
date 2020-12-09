@@ -7,10 +7,11 @@
     --color-middle-grey: #DBDAD5;
     --color-light-grey: #c1bfba;
     --color-dark-grey: #a9a7a3;
+    --color-description: #555555;
     --color-black: #000000;
-    --color-blue: #a5dcff;
+    --color-blue: #72c0f0;
     --color-yellow: #fff7d1;
-    --color-orange: #feb546;
+    --color-orange: #f0a272;
 
     /* Font size */
     --font-large: 48px;
@@ -24,11 +25,11 @@
     --weight-semi-bold: 600;
     --weight-regular: 400;
 
-    /* Font weight */
-
     /* Size */
     --size-border-radius: 4px;
 
+    /* Animation */
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -155,3 +156,72 @@ p{
     border-radius: var(--size-border-radius);
 }
 
+
+
+/* Section Common */
+.section {
+    text-align: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* About */
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px;
+    margin: auto;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major__title,
+.major__description{
+    color: var(--color-description);
+}
+
+.major__description{
+    font-size: var(--font-small);
+}
+
+.major__icon i {
+    transition: all var(--animation-duration) ease;
+}
+.major__icon i:hover{
+    color: var(--color-orange);
+    transform: rotate(-30deg) scale(1.1);
+}
+
+.school{
+    display: flex;
+    align-items: center;
+}
+
+.school__description{
+    margin: 0 16px;
+    text-align: left;
+}
+
+.school__name,
+.school__period{
+    color: var(--color-description);
+}
+
+.school__name{
+    font-size: var(--font-small);
+}
+
+.school__period{
+    font-size: var(--font-micro);
+}
