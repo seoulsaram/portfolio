@@ -10,8 +10,8 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=> {
-   console.log(window.scrollY);
-   console.log(`navbar : ${navbarHeight}`);
+   //console.log(window.scrollY);
+   //console.log(`navbar : ${navbarHeight}`);
    if(window.scrollY > navbarHeight){
        navbar.classList.add('navbar--dark');
        //스크롤링이 nav bar이상으로 진행되면 진하게 만들자.
@@ -58,8 +58,28 @@ contactMe.addEventListener('click', () => {
     scrollIntoViews('#contact');
 })
 
+
+
+//스크롤링이 되면 home이 점점 투명해지는 효과(내릴수록 투명도가 증가해야 함.)
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+    //homeHeight이 800이라고 할 때 스크롤이 0(하나도 안내림)이면
+    //0 / 800 = 0 이고 여기에 1을 빼면 1 = 100% (투명도 0)
+    //스크롤이 400만큼 내려왔다면
+    // 400 / 800 = 0.5 그리고 1 - 0.5 = 0.5 (즉 투명도 0.5 = 50% 주면 되고)
+    // 스크롤 800이면 
+    // 800 / 800 = 1, 1 - 1 = 0 완전투명
+});
+
+
+
 // 반복되는 코드를 함수로 만들기
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : "smooth"});
 }
+
+
+
