@@ -27,3 +27,16 @@ document.addEventListener('scroll', ()=> {
 //테두리를 제외한 안의 사각형 크기만 알고싶을 경우
 //ClientWidth, ClientHeight를 사용한다. padding도 포함한 크기가 나온다.
 //ex) element.clientWidth
+
+
+
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+    //클릭된 이벤트가 들어오고
+    //클릭이 된 아이템의 요소를 가져올 땐 event.target
+    console.log(event.target);
+})
+
+
+
