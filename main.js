@@ -35,8 +35,23 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     //클릭된 이벤트가 들어오고
     //클릭이 된 아이템의 요소를 가져올 땐 event.target
-    console.log(event.target);
-})
+    const target = event.target;
+    const link = target.dataset.link;
+    if(link == null){
+        //target의 영역이 navbar 메뉴 영역이라서,
+        //dataset이 들어있지 않은 부분을 클릭했을 때에도
+        //어떤 작업이 이루어지기 때문에, dataset을 넣은 부분,
+        //즉 메뉴 이름을 눌렀을 때에만 작동되도록
+        //만약 dataset-link라는 속성이 null(안들어있다면)이라면
+        //아무작업도 하지 않는다.
+        return;
+    }
+    console.log(event.target.dataset.link);
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+});
+//scrollIntoView : element의 id를 가져와서 그 id에 scrollIntoView()를 붙이면
+//그 id가 있는 곳으로 scroll해준다. behavior: "smooth" 는 부드럽게 이동.
 
 
 
