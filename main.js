@@ -46,12 +46,20 @@ navbarMenu.addEventListener('click', (event) => {
         //아무작업도 하지 않는다.
         return;
     }
-    console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollIntoViews(link);
 });
 //scrollIntoView : element의 id를 가져와서 그 id에 scrollIntoView()를 붙이면
 //그 id가 있는 곳으로 scroll해준다. behavior: "smooth" 는 부드럽게 이동.
 
 
+//Contact Me로 스크롤 이동
+const contactMe = document.querySelector('.home__contact');
+contactMe.addEventListener('click', () => {
+    scrollIntoViews('#contact');
+})
 
+// 반복되는 코드를 함수로 만들기
+function scrollIntoViews(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior : "smooth"});
+}
