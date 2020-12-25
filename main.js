@@ -75,6 +75,24 @@ document.addEventListener('scroll', ()=> {
 
 
 
+//스크롤을 하면 화살표 버튼 나타나게 하기
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=> {
+    if(window.scrollY > homeHeight/2){
+        //home 높이의 반만큼만 스크롤이 내려갔을 때 효과주기
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+arrowUp.addEventListener('click', () =>{
+    scrollIntoViews('#home');
+})
+
+
+
+
 // 반복되는 코드를 함수로 만들기
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
