@@ -88,7 +88,39 @@ document.addEventListener('scroll', ()=> {
 
 arrowUp.addEventListener('click', () =>{
     scrollIntoViews('#home');
-})
+});
+
+
+
+//프로젝트
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    //만약 dataset의 filter가 없다면 false이므로 만약 false라면
+    //해당 노드의 부모 노드에서 dataset.filter를 찾아라.
+
+    if(filter == null){
+        return;
+    }
+    //work 이미지들이 뿜뿜하고 나오는 효과를 주기 위해 클래스 추가.
+    projectContainer.classList.add('anim-out');
+    //work이미지가 계속 투명한 채로 남아있기 때문에 300밀리세컨 뒤에 클래스이름을 지워서
+    //투명효과를 없애기
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type){
+                //filter가 *이거나 filter의 이름과 dataset-type의 이름이 같다면
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+
+});
 
 
 
