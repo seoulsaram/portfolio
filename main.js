@@ -46,10 +46,23 @@ navbarMenu.addEventListener('click', (event) => {
         //아무작업도 하지 않는다.
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoViews(link);
 });
 //scrollIntoView : element의 id를 가져와서 그 id에 scrollIntoView()를 붙이면
 //그 id가 있는 곳으로 scroll해준다. behavior: "smooth" 는 부드럽게 이동.
+
+
+
+//작은 화면 메뉴 버튼 토글
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+
+
+
 
 
 //Contact Me로 스크롤 이동
