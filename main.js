@@ -104,6 +104,17 @@ workBtnContainer.addEventListener('click', (e) => {
     if(filter == null){
         return;
     }
+
+    //클릭된 버튼 active 고정
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target :
+                            e.target.parentNode;
+    //지금 클릭된게 버튼이면 그냥 그 타겟을 쓰고, 아니면(스판이면) 부모노드(버튼)의 것을 쓴다.
+    target.classList.add('selected');
+
+
+
     //work 이미지들이 뿜뿜하고 나오는 효과를 주기 위해 클래스 추가.
     projectContainer.classList.add('anim-out');
     //work이미지가 계속 투명한 채로 남아있기 때문에 300밀리세컨 뒤에 클래스이름을 지워서

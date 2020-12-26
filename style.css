@@ -124,16 +124,16 @@ p{
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
+    /*hover시 테두리가 생기게 만들면 글자가 살짝 덜컹거리기 때문에
+    기본적으로 테두리를 넣어두되, 투명으로 넣기*/
+    border: 1px solid transparent;
     border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active{
-    border: 1px solid var(--color-black);
-}
-
 .navbar__menu__item:hover {
+    border: 1px solid var(--color-black);
     background-color: var(--color-light-grey);
-    
+    border-radius: var(--size-border-radius);
 }
 
 .navbar__toggle-btn{
@@ -320,13 +320,13 @@ p{
     padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover{
     background-color: var(--color-orange);
     color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
     top: 0;
