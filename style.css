@@ -59,6 +59,8 @@ button{
     cursor: pointer;
     border: none;
     outline: none;
+    /*아이폰 사용자는 이쪽패딩을 0으로 줘야함*/
+    padding: 0;
 }
 
 
@@ -120,6 +122,10 @@ p{
     font-weight: var(--weight-semi-bold);
 }
 
+.navbar__menu__item.active{
+    border: 1px solid var(--color-white);
+}
+
 .navbar__menu__item{
     padding: 8px 12px;
     margin: 0 4px;
@@ -175,6 +181,10 @@ p{
     padding: 8px 12px;
     border: 2px solid var(--color-black);
     border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover{
+    background-color: var(--color-orange);
 }
 
 
@@ -318,6 +328,7 @@ p{
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -333,16 +344,16 @@ p{
 }
 
 .category__count{
-    background-color: var(--color-orange);
+    background-color: var(--color-yellow);
     border-radius: 50%;
-    color: var(--color-white);
+    color: var(--color-description);
     width: 20px;
     height: 20px;
     line-height: 20px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration);
 }
@@ -523,8 +534,22 @@ p{
 
 /* 스크린 너비가 768 이하일 때만 주어질 스타일*/
 @media screen and (max-width: 768px){
+
+    :root{
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+
+    }
+
     .navbar__toggle-btn{
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
 
     #navbar{
@@ -549,26 +574,63 @@ p{
         display: block;
     }
 
+    .section{
+        padding: 16px;
+        padding-top: 40px;
+    }
+
     .about__majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major{
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset{
         flex-direction: column;
     }
 
+    .category__btn{
+        margin: 4px 0;
+        width: 100%;
+    }
+
+    .category__count{
+        right: 90px;
+    }    
+
     .project{
         flex-grow: 1;
     }
 
-    .testimonial__avatar{
-        width: 80px;
-        height: 80px;
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
     }
-    
+
+    .testimonial__avatar{
+        width: 120px;
+        height: 120px;
+    }
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd){
+        margin:0;
+        margin-bottom: 8px;
+    }
+
+    .testimonial__speech-bubble{
+        order:1;
+    }
+
+    .arrow-up{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        bottom: 16px;
+        right:16px;
+    }
 }
 

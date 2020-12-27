@@ -48,6 +48,7 @@ navbarMenu.addEventListener('click', (event) => {
     }
     navbarMenu.classList.remove('open');
     scrollIntoViews(link);
+    selectNavItem(target);
 });
 //scrollIntoView : element의 id를 가져와서 그 id에 scrollIntoView()를 붙이면
 //그 id가 있는 곳으로 scroll해준다. behavior: "smooth" 는 부드럽게 이동.
@@ -149,11 +150,107 @@ workBtnContainer.addEventListener('click', (e) => {
 
 
 
+
+
+
+
+
+
+
+
+// 스크롤 되는 섹션에 맞는 메뉴가 활성화되게 만들기.
+
+// 1. 모든 섹션 요소들과 메뉴아이템들을 가져온다.
+const sectionIds = ['#home', '#about', '#skills', '#work', '#testimonial', '#contact',];
+const sections = sectionIds.map(id => document.querySelector(id));
+//각 섹션의 id를 배열형태로 만들고
+//이 배열을 map을 통해 id라는 이름으로 쿼리셀렉터로 요소찾을 때 넣는다.
+//그럼 map이 배열의 길이만큼 뺑글뺑글 돌면서 document.querySelector를 실행하여
+//각각의 돔요소를 찾아 새로운 배열로 만든다.
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+//nav메뉴에는 각 섹션에 해당하는 id가 data-link= 에 담겨있기 때문에 위와같이 찾아온다.
+//속성값을 받아올 때는 []를 사용
+console.log(navItems);
+
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected){
+    selectedNavItem.classList.remove('active');
+    selectedNavItem = selected;
+    //배열로 찾아진 네비게이션메뉴 중에서 찾아온 인덱스값을 넣어주고
+    //찾아진 인덱스에 클래스명 'active'를 추가해준다.
+    selectedNavItem.classList.add('active');
+}
+
 // 반복되는 코드를 함수로 만들기
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior : "smooth"});
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
+
+
+const observerOptions = {
+    root : null,
+    rootMargin: '0px',
+    threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+            //요소가 화면으로 들어오고있지 않는 상태라면~
+            //페이지가 로드되면 바로 페이지 밖으로 나가지는 섹션들 때문에 해당 섹션들에 대해
+            //콜백함수가 실행되어 처음 로드됐을 때 선택되어지는 nav메뉴가 엉뚱한 것이 될 수 있으므로
+            //entry가 isIntersecting이 아니고, 밖으로 나가고 지금 현재의 entry에 intersectionRatio가
+            //무조건 0 이상인 아이들에 한해서만 처리해준다는 조건을 줌.
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            //해당 섹션의 인덱스를 entry.target.id를 통해 가져오고
+            
+            //요소의 크기와 위치의 y축이 마이너스일 때, 즉 위쪽 방향으로 윈도우 바깥으로 나갔을 때
+            if(entry.boundingClientRect.y < 0){
+                //요소의 나가고있는 인덱스의 다음요소(+1)를 찾는다.
+                selectedNavIndex = index + 1;
+            }else{
+                selectedNavIndex = index - 1;
+            }
+        }
+    });
+    //해당하는 섹션을 찾아 navbar메뉴를 활성화하는 기능을 넣기
+    //섹션이 위로 또는 아래로 빠질 때 각각 위, 아래에 해당하는 섹션을 활성화 하면 됨.
+    //즉 위로 빠지면 위로 빠지는 그 다음섹션을.
+};
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
+function selectNavMenu(){
+     //scroll, wheel의 차이
+    //scroll은 자동으로 이루어지는 스크롤링
+    //wheel은 사용자가 마우스나 트랙패드로 스크롤을 직접 했을경우의 차이.
+    //scroll은 우리가 메뉴 선택 시 왔다갔다 하는 때에도 이루어지지만
+    //wheel은 사용자가 마우스를 움직일 때만 발생
+    if(window.scrollY === 0){
+        selectedNavIndex = 0;
+    } else if(Math.round(window.scrollY + window.innerHeight >= document.body.clientHeight)){
+        //스크롤이 제일 밑으로 도달했다면~
+        //(window.scrollY + window.innerHeight >= document.body.clientHeight)
+        //위의 공식은 scrollY와 window창의 innerHeight값을 더한 값이 정확하게 일치하지 않는 경우가
+        //있다. document.doby.clientHeight은 1270일 수 있고,
+        //scrollY와 window창의 innerHeight더한 값은 1269.2이런 식으로 소수점이
+        //나올 수 있다. 그러므로 더한값을 반올림해주면 1270이 된다.
+        selectedNavIndex = navItems.length - 1;
+    }
+    selectNavItem(navItems[selectedNavIndex]);
+
+}
+
+
+window.addEventListener('wheel', () => selectNavMenu());
+
+window.addEventListener('keyup', () => selectNavMenu());
+
 
 
 
