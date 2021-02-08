@@ -6,11 +6,13 @@
     <title>SeoulSaram</title>
     <meta name="description" content="2nd Portfolio"/>
     <meta name="author" content="SeoulSaram"/>
-    <link rel="icon" type="image/png" href="imgs/favicon.png"/>
+    <link rel="icon" type="image/png" href="imgs/seoul_tab.png"/>
     <script src="https://kit.fontawesome.com/ea746dc176.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
 rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js" defer></script>
 <!--font-family: 'Open Sans', sans-serif;-->
@@ -19,8 +21,8 @@ rel="stylesheet">
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="far fa-grin-stars"></i>
-            <a href="#">GaYeon</a> 
+            <img class="navbar__logoImg" src="imgs/seoul.png" alt="logo">
+            <a href="#"></a> 
         </div>
         <div class="navbar__menu">
             <ul class="navbar__menu">
@@ -31,6 +33,7 @@ rel="stylesheet">
                 <li class="navbar__menu__item" data-link="#testimonial">Testimonial</li>
                 <li class="navbar__menu__item" data-link="#contact">contact</li>
             </ul>
+            
         </div>
 
         <!-- Toggle button -->
@@ -40,24 +43,24 @@ rel="stylesheet">
 
     </nav>
 
-
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img src="imgs/profile.png" alt="GaYeon's profile photo" class="home__avatar"/>
-
-        <h1 class="home__title">Hello, <br/>I'm Dream Coder</h1>
-        <h2 class="home__description">A growing Web Developer</h2>
-        <button class="home__contact" data-link="#contact">CONTACT ME</button>
+            <h1 class="home__title">I'm seoulsaram</h1>
+            <p class="home__description">and a growing Web Developer</p>
+            <button class="home__contact" data-link="#contact"><i class="fas fa-chevron-down"></i></button>
         </div>
     </section>
 
     <!-- about -->
     <section id="about" class="section section__container">
-        <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nostrum tempore non et, 
-            totam facere laudantium molestias. Modi voluptates excepturi aperiam voluptatum accusamus 
-            sed nam, ut possimus, sit tempore exercitationem!
+        <h1 class="title_highlight about_title">About me</h1>
+        <p class="about_p">낡고 녹슨 것을 특색으로 삼아 개성으로 만들고, 
+            어둡고 좁은 골목을 예쁜 조명과<br>
+            커피향기, 음악으로 밝히며
+            서울의 탈진한 일면을 재해석하고 <br>
+            재창조하는 사람들과 계속해서 발전해 나가는
+            서울을 사랑하는 서울사람입니다.
         </p>
         <div class="about__majors">
             <div class="major">
@@ -66,7 +69,7 @@ rel="stylesheet">
                 </div>
                 <h2 class="major__title">Front-end</h2>
                 <div class="major__description">
-                    HTML, CSS, Javascript, Web APIs
+                    HTML<br> CSS<br> Javascript<br> React<br> PostCSS<br> Web APIs
                 </div>
             </div>
             <div class="major">
@@ -84,13 +87,14 @@ rel="stylesheet">
                 </div>
                 <h2 class="major__title">Database</h2>
                 <div class="major__description">
-                    Oracle, MongoDB
+                    Oracle<br> MongoDB
                 </div>
             </div>
         </div>
         <div class="about__school">
             <div class="school">
                 <img src="imgs/school/kh_logo.png" alt="kh" class="school__logo">
+                <div class="school__bar"></div>
                 <div class="school__description">
                     <p class="school__name">KH 정보교육원 - 웹기반 빅데이터 전문 개발자 양성과정</p>
                     <p class="school__period">2020.06.05 - 2021.01.07</p>
@@ -102,15 +106,13 @@ rel="stylesheet">
     <!-- skills -->
     <section id="skills" class="section">
         <div class="section__container">
-            <h1>Skills</h1>
+            <h1 class="title_highlight">Skills</h1>
         <h2>Stills & Attribute</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eos omnis amet fugiat 
-            nesciunt nostrum provident eligendi quae dignissimos adipisci doloremque officiis nobis 
-            vero, voluptates earum quasi, consequatur, qui dicta?
+        <p>약 9개월간 갈고 닦은 언어와 툴들을 소개합니다
         </p>
         <div class="skillset">
             <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
+                <h3 class="skillset__title">DEVELOPMENT SKILLS</h3>
                 <div class="skill">
                     <div class="skill_description">
                         <span>HTML</span>
@@ -122,7 +124,7 @@ rel="stylesheet">
                 </div>
                 <div class="skill">
                     <div class="skill_description">
-                        <span>Css</span>
+                        <span>CSS</span>
                         <span>60%</span>
                     </div>
                     <div class="skill__bar">
@@ -140,6 +142,15 @@ rel="stylesheet">
                 </div>
                 <div class="skill">
                     <div class="skill_description">
+                        <span>Spring framework</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill_description">
                         <span>Javascript</span>
                         <span>70%</span>
                     </div>
@@ -147,21 +158,34 @@ rel="stylesheet">
                         <div class="skill__value" style="width: 70%;"></div>
                     </div>
                 </div>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>React</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value" style="width: 50%;"></div>
+                    </div>
+                </div>
             </div>
             <div class="skillset__right">
                 <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
+                    <h3 class="skillset__title"><i class="fas fa-tools"></i> &nbsp;&nbsp;TOOLS</h3>
                     <ul class="tools__list">
-                        <li><span>Visual Studio Code</span></li>
                         <li><span>Eclipse</span></li>
+                        <li><span>Visual Studio Code</span></li>
                     </ul>
                 </div>
-                <div class="etc">
-                    <h3 class="skillset__title">Etc</h3>
-                    <ul class="etc__list">
-                        <li><span>Git</span></li>
-                    </ul>
-                </div>
+            <div class="etc">
+                <h3 class="skillset__title"><i class="fas fa-toolbox"></i>&nbsp;&nbsp;ETC</h3>
+                <ul class="etc__list">
+                    <li><span>Git</span></li>
+                    <li><span>PostCSS</span></li>
+                    <li><span>Postman</span></li>
+                </ul>
+            </div>
+                 
+                
             </div>
         </div>
     </section>
@@ -169,34 +193,51 @@ rel="stylesheet">
     <!-- wortk -->
     <section id="work" class="section">
         <div class="section__container">
-            <h1>My work</h1>
+            <h1 class="title_highlight">My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
                 <button class="category__btn selected" data-filter="*">All<span class="category__count">3</button>
-                <button class="category__btn" data-filter="semi">semi<span class="category__count">1</button>
-                <button class="category__btn" data-filter="final">final<span class="category__count">1</button>
+                <button class="category__btn" data-filter="team">Team Project<span class="category__count">2</button>
+                <button class="category__btn" data-filter="personal">Personal project<span class="category__count">1</button>
             </div>
             <div class="work__projects">
                 <!--작업했던 프로젝트 이미지 넣고 깃헙 링크 넣기-->
-                <a href="" class="project" target="blank" data-type="semi">
-                    <img src="imgs/projects/It_jobs1.png" alt="" class="project__img"/>
+                <a href="https://github.com/yiktne/fogams" class="project" target="blank" data-type="team">
+                    <img src="imgs/projects/FOGAMS.png" alt="fogams" class="project__img"/>
+                    <div class="project__description">
+                    <h3>Fogams</h3>
+                    <span>여행 설계 서비스</span>
+                    </div>
+                </a>
+                <a href="https://github.com/seoulsaram/IT_JOBS_F" class="project" target="blank" data-type="team">
+                    <img src="imgs/projects/bluberries.png" alt="blueberries" class="project__img"/>
                     <div class="project__description">
                     <h3>IT JOBS</h3>
                     <span>IT 전문 구직사이트</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-type="semi">
-                    <img src="imgs/projects/It_jobs2.jpg" alt="" class="project__img"/>
+
+                <a href="https://github.com/seoulsaram/youtube" class="project" target="blank" data-type="personal">
+                    <img src="imgs/projects/youtube_clone.png" alt="youtube" class="project__img"/>
                     <div class="project__description">
-                    <h3>IT JOBS</h3>
-                    <span>IT 전문 구직사이트</span>
+                    <h3>Youtube</h3>
+                    <span>검색, 동영상 재생 클론코딩</span>
                     </div>
                 </a>
-                <a href="" class="project" target="blank" data-type="final">
-                    <img src="imgs/projects/It_jobs3.jpg" alt="" class="project__img"/>
+
+                <a href="https://seoulsaram.github.io/carrot_game/game.html" class="project" target="blank" data-type="personal">
+                    <img src="imgs/projects/carrot_game.png" alt="carrot_game" class="project__img"/>
                     <div class="project__description">
-                    <h3>IT JOBS</h3>
-                    <span>IT 전문 구직사이트</span>
+                    <h3>Save Carrot</h3>
+                    <span>당근 구하기 게임</span>
+                    </div>
+                </a>
+
+                <a href="https://seoulsaram.github.io/carrot_game/game.html" class="project" target="blank" data-type="personal">
+                    <img src="imgs/projects/carrot_game.png" alt="habit_tracker" class="project__img"/>
+                    <div class="project__description">
+                    <h3>Habit Tracker</h3>
+                    <span>습관을 저장하는 앱</span>
                     </div>
                 </a>
             </div>
@@ -207,22 +248,26 @@ rel="stylesheet">
     <!--  testimonials -->
     <section id="testimonial" class="section">
         <div class="section__container">
-            <h1>Testimonials</h1>
-            <h3>See what they say about me</h3>
+            <h1 class="title_highlight">Testimonials</h1>
+            <h3>감사한 추천사!</h3>
             <div class="testimonials">
                 <div class="testimonial">
-                    <img src="imgs/testimonial/people1.jpg" alt="" class="testimonial__avatar">
+                    <img src="imgs/testimonial/teacher.jpg" alt="" class="testimonial__avatar">
                     <div class="testimonial__speech-bubble">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium magni deleniti cum perspiciatis fugit officia molestiae eum? Labore deserunt aliquid asperiores veniam quidem illo repudiandae omnis, nostrum dignissimos ab.</p>
-                        <p class="name"><a href="">GaYeon</a> / Samsung</p>
+                        <p style="text-align:left"><b>본인은 지원자의 학원 강사 (으)로서 7 개월 동안 지원자를 알고 지내고 있습니다.</b></p>
+                        <p style="text-align:left">과정을 진행하는 동안 서로에 대해 충분한 이해관계가 형성되어 해당 지원자를 추천합니다.<br>
+                            단체 활동 시 중요한 직책이나 활동을 맡겨도<br> 책임감과 리더쉽을 통해 훌륭한 결과를 도출해 낼 수 있는 수행 능력이 있다고 판단됩니다.<br>
+                            또한 비전공자이지만 전공자 수강생들과도 경쟁할 수 있는 능력을 기르는 기간이었으며, <br>프로젝트 기간엔 어려운 문제일수록 솔선수범하여 해결하고자 하는 의지가 매우 강하였습니다. <br>
+                            협업이 필요 한 부분에서는 다른 수강생들과의 적극적인 토론을 통해 원만한 결과를 도출해 내는 능력을 보였고, <br>
+                            어려운 문제에 맞닥뜨리는 경우엔 학습방법을 창의적으로 변경하고 발견하여 <br>
+                            새로운 패러다임의 문제해결 능력을 보임으로써 다른 수강생들에게 모범이 됨으로써 창의성이 검증되었습니다.<br>
+                            프로그램 개발 분야에 많은 관심을 보이고 있으며, 빠른 이해력을 가진 수강생이라 판단됩니다. <br>
+                            어떤 문제 에서도 쉽게 포기하거나 절망하지 않는 끈기를 보였으며, <br>
+                            자신의 능력을 100% 발휘하며 적극적으로 참여하 기를 두려워하지 않습니다.<br>
+                            언제나 탐구정신이 넘쳐나기 때문에 어려운 분야와 힘든 상황에서 재평가 될 것이라 생각하며, <br>
+                            학습능력과 논리적인 이해 능력이 뛰어나기 때문에 차후 업무에서 중책이 될 것이라 판단됩니다.</p><br>
+                        <p style="text-align:left" class="name"><a href="">이동헌 강사님</a> / <b>KH정보교육원 전임강사</b></p>
                     </div>
-                </div>
-                    <div class="testimonial">
-                        <div class="testimonial__speech-bubble">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium magni deleniti cum perspiciatis fugit officia molestiae eum? Labore deserunt aliquid asperiores veniam quidem illo repudiandae omnis, nostrum dignissimos ab.</p>
-                            <p class="name"><a href="">GaYeon</a>Samsung</p>
-                        </div>
-                    <img src="imgs/testimonial/people1.jpg" alt="" class="testimonial__avatar">
                 </div>
             </div>
         </div>

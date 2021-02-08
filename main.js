@@ -112,6 +112,7 @@ const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click', (e) => {
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    console.log(filter);
     //만약 dataset의 filter가 없다면 false이므로 만약 false라면
     //해당 노드의 부모 노드에서 dataset.filter를 찾아라.
 
