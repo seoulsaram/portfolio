@@ -605,24 +605,43 @@ p {
   margin: 12px;
 }
 
-.contact__title {
-  background-image: linear-gradient(transparent 50%, var(--color-orange) 0px);
-  display: inline-block;
-  padding-right: 4px;
-  padding-bottom: 2px;
-  background-position: 10px 2px;
-  background-repeat: no-repeat;
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
+  transition: all var(--animation-duration) ease-in;
 }
 
 .contact__links {
   font-size: var(--font-large);
   margin: 24px 0;
+  -webkit-animation: blink 1s ease-in-out infinite alternate;
+  -moz-animation: blink 1s ease-in-out infinite alternate;
+  animation: blink 1s ease-in-out infinite alternate;
 }
 
-.contact__links i:hover {
-  transform: scale(1.1);
-  color: var(--color-yellow);
-  transition: all var(--animation-duration) ease-in;
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Arrow up button scroll*/
