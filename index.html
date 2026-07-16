@@ -1,342 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SeoulSaram</title>
-    <meta name="description" content="2nd Portfolio"/>
-    <meta name="author" content="SeoulSaram"/>
-    <link rel="icon" type="image/png" href="imgs/favicon.png"/>
-    <script src="https://kit.fontawesome.com/ea746dc176.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="2nd Portfolio" />
+    <meta name="author" content="SeoulSaram" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/ea746dc176.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            Seoulsaram
-            <a href="#"></a> 
-        </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item active" data-link="#home">Home</li>
-                <li class="navbar__menu__item" data-link="#about">About</li>
-                <li class="navbar__menu__item" data-link="#skills">Skills</li>
-                <li class="navbar__menu__item" data-link="#work">My work</li>
-                <li class="navbar__menu__item" data-link="#testimonial">Testimonial</li>
-                <li class="navbar__menu__item" data-link="#contact">contact</li>
-            </ul>
-            
-        </div>
+      <div class="navbar__logo">
+        Seoulsaram
+        <a href="#"></a>
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Skills</li>
+          <li class="navbar__menu__item" data-link="#work">My work</li>
+          <li class="navbar__menu__item" data-link="#testimonial">
+            Testimonial
+          </li>
+          <li class="navbar__menu__item" data-link="#contact">contact</li>
+        </ul>
+      </div>
 
-        <!-- Toggle button -->
-        <button class="navbar__toggle-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
-        <div class="home__container">
-            <h2 class="home__title">I'm Seoulsaram</h2>
-            <p class="home__description">and a growing Web Developer</p>
-            <button class="home__contact" data-link="#contact"><i class="fas fa-chevron-down"></i></button>
-        </div>
+      <div class="home__container">
+        <h2 class="home__title">I'm Seoulsaram</h2>
+        <p class="home__description">and a growing Web Developer</p>
+        <button class="home__contact" data-link="#contact">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
     </section>
 
     <!-- about -->
     <section id="about" class="section section__container">
-        <h1 class="about_title">About me</h1>
-        <div class="about__profile">
-            
-        <img src="imgs/profile.png" alt="profile" class="about__img">
+      <h1 class="about_title">About me</h1>
+      <div class="about__profile">
+        <img src="imgs/profile.png" alt="profile" class="about__img" />
         <div class="about__desc_title">
-           <h2>I'm Seoulsaram<br> and a growing Web Developer.</h2>
-           <p class="desc_p">Ga Yeon Kim<br> 1991.07.04<br>kaste2233@gmail.com</p>
+          <h2>
+            I'm Seoulsaram<br />
+            and a growing Web Developer.
+          </h2>
+          <p class="desc_p">
+            Ga Yeon Kim<br /><a href="mailto:kaste2233@gmail.com"
+              >kaste2233@gmail.com</a
+            >
+          </p>
         </div>
         <div class="about__desc_desc">
-            <p class="desc_p">Introduce Myself</p>
-            <p class="desc_desc_desc korean">
-                9개월차 백엔드, 프론트엔드 개발 공부를 진행중인 김가연 입니다.<br>
-                클라이언트와 서버를 연결하고 UI, UX에 동적인 변화를 줄 수 있으며<br>
-                끊임없이 발전하고 진화하는 언어인 자바스크립트에 매력을 느껴 프론트엔드 개발자를<br>
-                향해 달려가고 있습니다.
+          <p class="desc_p">Introduce Myself</p>
+          <p class="desc_desc_desc korean">
+            React/Next.js 기반 서비스 구축 및 성능 최적화,<br />
+            금융·AI·대기업 PoC 등 다양한 도메인 경험을 통해 먼지나게 구르며
+            성장해온<br />
+            5년차 프론트엔드 개발자 김가연입니다.<br />
+            모든 사용자가 차별없이 사용할 수 있는 웹 서비스를 지향하며 <br />
+            웹 접근성, 웹 표준, SEO, 성능 최적화 등 다양한 분야에 관심을 가지고
+            있습니다.<br />
+          </p>
         </div>
-   
+      </div>
+
+      <hr class="about_hr" />
+      <h1>Key Projects</h1>
+      <div class="key-projects" aria-label="Key projects slider">
+        <button
+          class="key-projects__arrow key-projects__arrow--prev"
+          type="button"
+          aria-label="Previous project"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="key-projects__arrow key-projects__arrow--next"
+          type="button"
+          aria-label="Next project"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="key-projects__viewport">
+          <div class="key-projects__track">
+            <a
+              href="https://studio.jector.ai/intro/foodstyler"
+              target="_blank"
+              class="key-project"
+            >
+              <img
+                src="imgs/projects/studio.png"
+                alt="Studio project"
+                class="key-project__img"
+              />
+              <div class="key-project__overlay">
+                <h3 class="key-project__title">Jector studio</h3>
+                <p class="key-project__stack">
+                  Next.js · TypeScript · Sentry · Canvas · zustand · tailwind
+                  css · fabric.js
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://studio.jector.ai/intro/foodstyler"
+              class="key-project"
+            >
+              <img
+                src="imgs/projects/franchise.png"
+                alt="Franchise project"
+                class="key-project__img"
+              />
+              <div class="key-project__overlay">
+                <h3 class="key-project__title">Jector studio franchise</h3>
+                <p class="key-project__stack">
+                  Next.js · TypeScript · Sentry · Canvas · zustand · tailwind
+                  css · fabric.js
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://kr.lgappstv.com/main/tvapp/detail?appId=1256535&catCode1=&moreYn=N&cateYn=N&orderType=0&headerName=&appRankCode=&sellrUsrNo="
+              class="key-project"
+            >
+              <img
+                src="imgs/projects/beam.png"
+                alt="Beam project"
+                class="key-project__img"
+              />
+              <div class="key-project__overlay">
+                <h3 class="key-project__title">Jector AI</h3>
+                <p class="key-project__stack">
+                  WebOS SDK · Enact.js · TypeScript · Luna Service API
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-        
-        <hr class="about_hr">
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h2 class="major__title">Front-end</h2>
-                <div class="major__description">
-                    HTML<br> CSS<br> Javascript<br> React<br> PostCSS<br> Web APIs
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-java"></i>
-                </div>
-                <h2 class="major__title">Back-end</h2>
-                <div class="major__description">
-                    Java
-                </div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h2 class="major__title">Database</h2>
-                <div class="major__description">
-                    Oracle<br> MongoDB
-                </div>
-            </div>
-        </div>
-        <div class="about__school">
-            <div class="school">
-                <img src="imgs/school/kh_logo.png" alt="kh" class="school__logo">
-                <div class="school__bar"></div>
-                <div class="school__description">
-                    <p class="school__name">KH 정보교육원 - 웹기반 빅데이터 전문 개발자 양성과정</p>
-                    <p class="school__period">2020.06.05 - 2021.01.07</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- skills -->
     <section id="skills" class="section">
-        <div class="section__container">
-            <h1>Skills</h1>
-        <h3 class="title_highlight">Stills & Attribute
-        </h3>
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">DEVELOPMENT SKILLS</h3>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>HTML</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>CSS</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Java</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Spring framework</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Javascript</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>React</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 50%;"></div>
-                    </div>
-                </div>
+      <div class="section__container">
+        <h1>Work Experience</h1>
+        <h3 class="title_highlight">Title · Date · Key Impact</h3>
+
+        <div class="experience-list">
+          <article class="experience-card scroll-highlight">
+            <img
+              src="/imgs/connectbrick.png"
+              width="28"
+              height="28"
+              class="experience-card__logo"
+            />
+            <div class="experience-card__header">
+              <h2 class="experience-card__title">
+                CONNECTBRICK · Frontend Engineer
+              </h2>
+              <span class="experience-card__date">2024.01 - 2026.03</span>
             </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title"><i class="fas fa-tools"></i> &nbsp;&nbsp;TOOLS</h3>
-                    <ul class="tools__list">
-                        <li><span>Eclipse</span></li>
-                        <li><span>Visual Studio Code</span></li>
-                    </ul>
-                </div>
-            <div class="etc">
-                <h3 class="skillset__title"><i class="fas fa-toolbox"></i>&nbsp;&nbsp;ETC</h3>
-                <ul class="etc__list">
-                    <li><span>Git</span></li>
-                    <li><span>PostCSS</span></li>
-                    <li><span>Postman</span></li>
-                    <li><span>Adobe Photoshop</span></li>
-                    <li><span>Adobe Illustrator</span></li>
-                </ul>
+            <ul class="experience-card__bullets korean">
+              <li>
+                금융권(농협·경남은행) 하이브리드 웹뷰 서비스 최적화 및 연동 개발
+                (2025.11-2026.02)
+              </li>
+              <li>
+                제휴사별 맞춤형 인증 체계 구축: CI/IV 파라미터 및 UTM 소스 검증
+                후 HttpOnly 쿠키로 동적 관리
+              </li>
+              <li>
+                User-Agent 기반 제휴사별 로그인 페이지 리다이렉트 분기 로직 구현
+              </li>
+              <li>
+                웹-앱 간 히스토리 불일치 문제 해결: 자체 내비게이션 스택 기반
+                뒤로가기 UI 개발로 비정상 종료·이탈 문제 해소
+              </li>
+              <li>
+                OS별 다운로드/공유 로직 분기 (Android: 정적 HTTP URL, iOS:
+                Blob→File 변환)
+              </li>
+              <li>
+                농협 올원뱅크 카카오 SDK 연동 이슈 해결 및 제휴사에 인코딩
+                가이드 역제안
+              </li>
+              <li>
+                KT 협업: 캔버스 서비스용 텍스트/스티커 프리셋 데이터 동적 생성
+                로직 설계 및 API화 (2025.04-06)
+              </li>
+              <li>
+                AI 음식 사진 편집 서비스 '푸드 스타일러' 개발·론칭:
+                Next.js+Zustand+Konva/Fabric.js, 가입 전환율 20%+ 유지
+                (2024.11-2026.03)
+              </li>
+              <li>
+                컨텐츠코리아 전시회 AI 캐릭터화 웹앱 개발 및 현장 시연 (2024.10)
+              </li>
+              <li>
+                LG전자 WebOS TV 빔테리어 앱 개발: 음성/키보드 기반 AI
+                이미지·음악 생성, PoC 우수기업 선정 (2024.07-10)
+              </li>
+              <li>
+                멀티 레포 → 모노레포(pnpm+turbo) 아키텍처 전환 주도 (2024.05-06)
+              </li>
+              <li>
+                사내 스타일 라이브러리 구축: Storybook+Vanilla Extract 기반 공용
+                컴포넌트 시스템 (2024.05-2025.05)
+              </li>
+              <li>
+                Jector AI 상품 사진 배경 생성 서비스: React Flow 기반 노드형
+                에디터 개발, 프로덕트헌트 3위 (2024.01-04)
+              </li>
+              <li>Sentry 연동으로 실시간 오류 추적·모니터링 시스템 구축</li>
+            </ul>
+          </article>
+
+          <article class="experience-card scroll-highlight">
+            <img
+              src="/imgs/stclab.png"
+              width="28"
+              height="28"
+              class="experience-card__logo"
+            />
+            <div class="experience-card__header">
+              <h2 class="experience-card__title">
+                STC Lab · Frontend Engineer
+              </h2>
+              <span class="experience-card__date">2023.09 - 2023.11</span>
             </div>
-                 
-                
+            <ul class="experience-card__bullets korean">
+              <li>기존 on-premise 제품 콘솔 리팩토링 (2023.09-10)</li>
+              <li>
+                모달 관리: toggle 함수(1:1) → hook화 + 배열 기반 전역 state로
+                중첩 모달 지원, 가독성 개선
+              </li>
+              <li>
+                토스트: 미리 DOM 적재하던 방식 → react-hot-toast 도입으로
+                불필요한 DOM 제거
+              </li>
+              <li>
+                Form validation: reducer 기반 수동 처리 → react-hook-form +
+                yup으로 자동 검증
+              </li>
+              <li>
+                Redux store: 전역/로컬 상태 혼재 및 무관한 데이터 결합 문제 →
+                전역/로컬 분리, react-query로 fetching 데이터 캐싱
+              </li>
+              <li>
+                회사 제품 데모사이트 제작: 영문·일어 버전 구축 및 AWS EC2 배포
+                (2023.09-10)
+              </li>
+            </ul>
+          </article>
+
+          <article class="experience-card scroll-highlight">
+            <img
+              src="/imgs/gloz.png"
+              width="28"
+              height="28"
+              class="experience-card__logo"
+            />
+            <div class="experience-card__header">
+              <h2 class="experience-card__title">
+                GloZ Inc. · Frontend Engineer
+              </h2>
+              <span class="experience-card__date">2021.03 - 2023.09</span>
             </div>
+            <ul class="experience-card__bullets korean">
+              <li>
+                번역가 관리 및 현황 관리 SaaS 플랫폼 개발 (2021.05-2023.08)
+              </li>
+              <li>
+                CASL 기반 권한별 접근 제어, Storybook 공용 컴포넌트 시스템 구축
+              </li>
+              <li>
+                클라이언트 가이드라인/프리랜서 관리, 국가별 통화 지원 가격 관리
+                기능 개발
+              </li>
+              <li>
+                주문서·견적서·계산서(Order/Quote/Invoice) 전체 플로우 구현
+              </li>
+              <li>
+                어드민: 출금/인보이스 관리, 인증 시험(Certification) 검토·승인,
+                역할별 권한 기능 개발
+              </li>
+              <li>
+                번역/작업 관리, 비디오 프로젝트(유튜브 연동) 및 자동 견적 기능
+                구현
+              </li>
+              <li>
+                반응형 디자인 및 웹 접근성(ARIA) 개선, 사용자 온보딩 UX 강화
+              </li>
+              <li>회사 리브랜딩에 따른 전사 UI/UX 리뉴얼 주도</li>
+              <li>
+                Angular → React → Next.js 마이그레이션 (SEO/SSR 도입), Inicis
+                결제 시스템 통합
+              </li>
+            </ul>
+          </article>
         </div>
-    </section>
-
-    <!-- wortk -->
-    <section id="work" class="section">
-        <div class="section__container">
-            <h1>My work</h1>
-            <h3 class="title_highlight">Projects</h3>
-            <div class="work__categories">
-                <button class="category__btn selected" data-filter="*">All<span class="category__count">9</button>
-                <button class="category__btn" data-filter="team">Team Project<span class="category__count">2</button>
-                <button class="category__btn" data-filter="personal">Personal project<span class="category__count">3</button>
-                    <button class="category__btn" data-filter="UI">UI project<span class="category__count">4</button>
-            </div>
-            <div class="work__projects">
-                <!--작업했던 프로젝트 이미지 넣고 깃헙 링크 넣기-->
-                <a href="https://github.com/yiktne/fogams" target="_blank" class="project" target="blank" data-type="team">
-                    <img src="imgs/projects/FOGAMS.png" alt="fogams" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Fogams</h3>
-                    <span>Java - 여행 설계 서비스</span>
-                    </div>
-                </a>
-                <a href="https://github.com/seoulsaram/IT_JOBS_F" target="_blank" class="project" target="blank" data-type="team">
-                    <img src="imgs/projects/bluberries.png" alt="blueberries" class="project__img"/>
-                    <div class="project__description">
-                    <h3>IT JOBS</h3>
-                    <span>Java - IT 전문 구직사이트</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/seoulsaram/youtube" target="_blank" class="project" target="blank" data-type="personal">
-                    <img src="imgs/projects/youtube_clone.png" alt="youtube" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Youtube</h3>
-                    <span>React - 검색, 동영상 재생 클론코딩</span>
-                    </div>
-                </a>
-
-                <a href="https://cheking-habit.netlify.app" target="_blank" class="project" target="blank" data-type="personal">
-                    <img src="imgs/projects/habit_tracker.png" alt="habit_tracker" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Habit Tracker</h3>
-                    <span>React - 습관 체크 앱</span>
-                    </div>
-                </a>
-
-                <a href="https://seoulsaram.github.io/carrot_game/game.html" target="_blank" class="project" target="blank" data-type="personal">
-                    <img src="imgs/projects/carrot_game.png" alt="carrot_game" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Save Carrot</h3>
-                    <span>JS - 당근 구하기 게임</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/seoulsaram/UI_Projects" target="_blank" class="project" target="blank" data-type="UI">
-                    <img src="imgs/projects/PEX.png" alt="PEX" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Patient Experience</h3>
-                    <span>Photoshop/Illustrator - PEX : Patient Experience</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/seoulsaram/UI_Projects" target="_blank" class="project" target="blank" data-type="UI">
-                    <img src="imgs/projects/goodbyeCorona.png" alt="goodbyeCorona" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Goodbye Corona</h3>
-                    <span>Photoshop/Illustrator - Goodbye Corona</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/seoulsaram/UI_Projects" target="_blank" class="project" target="blank" data-type="UI">
-                    <img src="imgs/projects/algobada.png" alt="algobada" class="project__img"/>
-                    <div class="project__description">
-                    <h3>알고바다</h3>
-                    <span>Photoshop/Illustrator - 알고바다 : 수술비용 예측</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/seoulsaram/UI_Projects" target="_blank" class="project" target="blank" data-type="UI">
-                    <img src="imgs/projects/smovey.png" alt="smovey" class="project__img"/>
-                    <div class="project__description">
-                    <h3>Smovey</h3>
-                    <span>Photoshop/Illustrator - Smovey : 금연 보조 모바일 앱</span>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-        
+      </div>
     </section>
 
     <!--  testimonials -->
     <section id="testimonial" class="section">
-        <div class="section__container">
-            <h1>Testimonials</h1>
-            <h3 class="title_highlight">Testimonial from the academy</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="imgs/testimonial/teacher.jpg" alt="" class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p class="korean" style="text-align:left"><b>본인은 지원자의 학원 강사 (으)로서 7 개월 동안 지원자를 알고 지내고 있습니다.</b></p>
-                        <p class="korean" style="text-align:left">과정을 진행하는 동안 서로에 대해 충분한 이해관계가 형성되어 해당 지원자를 추천합니다.<br>
-                            단체 활동 시 중요한 직책이나 활동을 맡겨도 책임감과 리더쉽을 통해 훌륭한 결과를 <br>
-                            도출해 낼 수 있는 수행 능력이 있다고 판단됩니다. 프로젝트 기간엔 어려운 문제일수록<br>
-                            솔선수범하여 해결하고자 하는 의지가 매우 강하였습니다. 협업이 필요 한 부분에서는<br>
-                            다른 수강생들과의 적극적인 토론을 통해 원만한 결과를 도출해 내는 능력을 보였고, <br>
-                            어려운 문제에 맞닥뜨리는 경우엔 학습방법을 창의적으로 변경하고 발견하여 새로운 패러다임의<br>
-                            문제해결 능력을 보임으로써 다른 수강생들에게 모범이 됨으로써 창의성이 검증되었습니다.<br>
-                            프로그램 개발 분야에 많은 관심을 보이고 있으며, 빠른 이해력을 가진 수강생이라 판단됩니다. <br>
-                            어떤 문제 에서도 쉽게 포기하거나 절망하지 않는 끈기를 보였으며, <br>
-                            언제나 탐구정신이 넘쳐나기 때문에 어려운 분야와 힘든 상황에서 재평가 될 것이라 생각하며, <br>
-                            학습능력과 논리적인 이해 능력이 뛰어나기 때문에 차후 업무에서 중책이 될 것이라 판단됩니다.</p><br>
-                        <p style="text-align:left" class="name"><a href="">이동헌 강사님</a> / <b>KH정보교육원 전임강사</b></p>
-                    </div>
-                </div>
+      <div class="section__container">
+        <h1>Testimonials</h1>
+        <h3 class="title_highlight">Testimonial from the academy</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="imgs/testimonial/teacher.jpg"
+              alt=""
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p class="korean" style="text-align: left">
+                <b
+                  >본인은 지원자의 학원 강사 (으)로서 7 개월 동안 지원자를 알고
+                  지내고 있습니다.</b
+                >
+              </p>
+              <p class="korean" style="text-align: left">
+                과정을 진행하는 동안 서로에 대해 충분한 이해관계가 형성되어 해당
+                지원자를 추천합니다.<br />
+                단체 활동 시 중요한 직책이나 활동을 맡겨도 책임감과 리더쉽을
+                통해 훌륭한 결과를 <br />
+                도출해 낼 수 있는 수행 능력이 있다고 판단됩니다. 프로젝트 기간엔
+                어려운 문제일수록<br />
+                솔선수범하여 해결하고자 하는 의지가 매우 강하였습니다. 협업이
+                필요 한 부분에서는<br />
+                다른 수강생들과의 적극적인 토론을 통해 원만한 결과를 도출해 내는
+                능력을 보였고, <br />
+                어려운 문제에 맞닥뜨리는 경우엔 학습방법을 창의적으로 변경하고
+                발견하여 새로운 패러다임의<br />
+                문제해결 능력을 보임으로써 다른 수강생들에게 모범이 됨으로써
+                창의성이 검증되었습니다.<br />
+                프로그램 개발 분야에 많은 관심을 보이고 있으며, 빠른 이해력을
+                가진 수강생이라 판단됩니다. <br />
+                어떤 문제 에서도 쉽게 포기하거나 절망하지 않는 끈기를 보였으며,
+                <br />
+                언제나 탐구정신이 넘쳐나기 때문에 어려운 분야와 힘든 상황에서
+                재평가 될 것이라 생각하며, <br />
+                학습능력과 논리적인 이해 능력이 뛰어나기 때문에 차후 업무에서
+                중책이 될 것이라 판단됩니다.
+              </p>
+              <br />
+              <p style="text-align: left" class="name">
+                <a href="">이동헌 강사님</a> / <b>KH정보교육원 전임강사</b>
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
-        <h3 class="contact__email">kaste2233@gmail.com</h3>
-        <div class="contact__links">
-            <a href="https://github.com/seoulsaram" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <p class="contact__rights">2020 GaYeon Kim - All rights reserved</p>
+      <h1 class="contact__title">Let's talk</h1>
+      <h3 class="contact__email">kaste2233@gmail.com</h3>
+      <div class="contact__links">
+        <a href="https://github.com/seoulsaram" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2020 GaYeon Kim - All rights reserved</p>
     </section>
 
     <!-- Arrow up button -->
     <button class="arrow-up">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
-
-
-</body>
+  </body>
 </html>
