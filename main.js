@@ -82,8 +82,7 @@ const projects = document.querySelectorAll('.project');
 const sectionIds = [
   '#home',
   '#about',
-  '#skills',
-  '#work',
+  '#experience',
   '#testimonial',
   '#contact',
 ];
@@ -97,7 +96,6 @@ const navItems = sectionIds.map((id) =>
 );
 //nav메뉴에는 각 섹션에 해당하는 id가 data-link= 에 담겨있기 때문에 위와같이 찾아온다.
 //속성값을 받아올 때는 []를 사용
-console.log(navItems);
 
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
 let selectedNavIndex = 0;
