@@ -738,8 +738,14 @@ p {
   color: var(--color-description);
 }
 
-.testimonial__speech-bubble a {
+.testimonial__speech-bubble .name {
   color: var(--color-blue);
+}
+.testimonial__speech-bubble .date {
+  color: var(--color-dark-grey);
+  font-size: var(--font-micro);
+  text-align: left;
+  margin: 0;
 }
 
 /* Contact */
